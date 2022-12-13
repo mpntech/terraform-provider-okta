@@ -94,6 +94,8 @@ const (
 	networkZone                   = "okta_network_zone"
 	orgConfiguration              = "okta_org_configuration"
 	orgSupport                    = "okta_org_support"
+	pageError                     = "okta_page_error"
+	pageSignIn                    = "okta_page_signin"
 	policy                        = "okta_policy"
 	policyMfa                     = "okta_policy_mfa"
 	policyMfaDefault              = "okta_policy_mfa_default"
@@ -317,6 +319,8 @@ func Provider() *schema.Provider {
 			networkZone:                   resourceNetworkZone(),
 			orgConfiguration:              resourceOrgConfiguration(),
 			orgSupport:                    resourceOrgSupport(),
+			pageError:                     resourcePageError(),
+			pageSignIn:                    resourcePageSignIn(),
 			policyMfa:                     resourcePolicyMfa(),
 			policyMfaDefault:              resourcePolicyMfaDefault(),
 			policyPassword:                resourcePolicyPassword(),
