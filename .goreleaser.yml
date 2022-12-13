@@ -42,7 +42,11 @@ signs:
 release:
   # Explicit set the repo to release from. Default is origin.
   github:
+<<<<<<< HEAD
     owner: mpntech
+=======
+    owner: tradeix
+>>>>>>> c7f907ee... support for custom pages
     name: terraform-provider-okta
   # Visit your project's GitHub Releases page to publish this release.
   draft: true
