@@ -52,8 +52,8 @@ publishers:
 - name: tfcloud checksum
   env:
     - TFE_TOKEN={{ .Env.TFE_TOKEN }}
-    - TFE_ORG=mpnt
-    - TFE_NAMESPACE=mpnt
+    - TFE_ORG=marcopolonetwork
+    - TFE_NAMESPACE=marcopolonetwork
     - TFE_KEYID={{ .Env.TFE_KEYID }}
   cmd: /usr/local/bin/gorelease-publisher-tfcloud provider private {{ abs .ArtifactPath }}
   checksum: true
@@ -62,8 +62,8 @@ publishers:
 - name: tfcloud sigs
   env:
     - TFE_TOKEN={{ .Env.TFE_TOKEN }}
-    - TFE_ORG=mpnt
-    - TFE_NAMESPACE=mpnt
+    - TFE_ORG=marcopolonetwork
+    - TFE_NAMESPACE=marcopolonetwork
     - TFE_KEYID={{ .Env.TFE_KEYID }}
   cmd: /usr/local/bin/gorelease-publisher-tfcloud provider private {{ abs .ArtifactPath }}
   signature: true
@@ -72,7 +72,7 @@ publishers:
 - name: tfcloud
   env:
     - TFE_TOKEN={{ .Env.TFE_TOKEN }}
-    - TFE_ORG=mpnt
-    - TFE_NAMESPACE=mpnt
+    - TFE_ORG=marcopolonetwork
+    - TFE_NAMESPACE=marcopolonetwork
     - TFE_KEYID={{ .Env.TFE_KEYID }}
   cmd: /usr/local/bin/gorelease-publisher-tfcloud provider private {{ abs .ArtifactPath }}
