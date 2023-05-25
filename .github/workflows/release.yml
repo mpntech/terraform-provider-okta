@@ -33,7 +33,7 @@ jobs:
       - name: getPublisher
         run: |
           wget https://github.com/mpntech/gorelease-publisher-tfcloud/releases/download/v0.0.4/gorelease-publisher-tfcloud_0.0.4_linux_amd64.zip
-          unzip -y gorelease-publisher-tfcloud_0.0.4_linux_amd64.zip
+          unzip -q gorelease-publisher-tfcloud_0.0.4_linux_amd64.zip
           mv gorelease-publisher-tfcloud_v0.0.4 /usr/local/bin/gorelease-publisher-tfcloud
       - 
         name: Import GPG key
