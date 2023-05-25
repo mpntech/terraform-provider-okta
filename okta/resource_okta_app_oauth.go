@@ -51,6 +51,7 @@ var appRequirementsByType = map[string]*applicationMap{
 			tokenExchange,
 			deviceCode,
 			interactionCode,
+			password,
 		},
 	},
 	"native": {
