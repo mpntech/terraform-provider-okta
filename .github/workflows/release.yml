@@ -33,7 +33,7 @@ jobs:
       - 
         name: getPublisher
         run: |
-          VERSION=$(curl https://api.github.com/repos/mpntech/goreleaser-publisher-tfcloud/releases/latest | jq .name)
+          VERSION=$(curl https://api.github.com/repos/mpntech/goreleaser-publisher-tfcloud/releases/latest | jq -r .name)
           wget -O /usr/local/bin/gorelease-publisher-tfcloud https://github.com/mpntech/goreleaser-publisher-tfcloud/releases/download/v${VERSION}/goreleaser-publisher-tfcloud_linux_amd64
           chmod +x /usr/local/bin/gorelease-publisher-tfcloud
       - 
