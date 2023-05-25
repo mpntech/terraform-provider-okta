@@ -49,7 +49,7 @@ release:
 changelog:
   skip: true
 publishers:
-- name: tfcloud signs
+- name: tfcloud checksum
   env:
     - TFE_TOKEN={{ .Env.TFE_TOKEN }}
     - TFE_ORG=mpnt
@@ -57,9 +57,17 @@ publishers:
     - TFE_KEYID={{ .Env.TFE_KEYID }}
   cmd: /usr/local/bin/gorelease-publisher-tfcloud provider private {{ abs .ArtifactPath }}
   checksum: true
-  signature: true
   ids:
     - checksum
+- name: tfcloud sigs
+  env:
+    - TFE_TOKEN={{ .Env.TFE_TOKEN }}
+    - TFE_ORG=mpnt
+    - TFE_NAMESPACE=mpnt
+    - TFE_KEYID={{ .Env.TFE_KEYID }}
+  cmd: /usr/local/bin/gorelease-publisher-tfcloud provider private {{ abs .ArtifactPath }}
+  signature: true
+  ids:
     - sigs
 - name: tfcloud
   env:
